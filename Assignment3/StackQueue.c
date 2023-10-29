@@ -1,10 +1,12 @@
 #include <stdio.h>
 
+//Stack Operations
 int pushStack(int, int);
 int popStack(int);
 int peekStack(int);
 void retStack(int);
 
+//Queue Operations
 int pushQueue(int, int, int, int);
 int popQueue(int, int, int);
 int peekQueue(int, int);
