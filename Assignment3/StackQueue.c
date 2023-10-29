@@ -2,12 +2,12 @@
 
 int pushStack(int, int);
 int popStack(int);
-int topElStack(int);
+int peekStack(int);
 void retStack(int);
 
 int pushQueue(int, int, int, int);
 int popQueue(int, int, int);
-int topElQueue(int, int);
+int peekQueue(int, int);
 void retQueue(int, int);
 
 int stack[100];
@@ -65,7 +65,7 @@ int main()
                     }
                 case 3:
                     {
-                        int answer = topElStack(top);
+                        int answer = peekStack(top);
                         if(answer != -1) printf("Element at top is :- %d\n", answer);
                         else printf("Stack is empty!\n");
                         break;
@@ -160,7 +160,7 @@ int main()
 
                 case 3:
                     {
-                        int answer = topElQueue(front, rear);
+                        int answer = peekQueue(front, rear);
 
                         if(answer != -16000)
                         {
@@ -233,7 +233,7 @@ int popStack(int top)
     return top;
 }
 
-int topElStack(int top)
+int peekStack(int top)
 {
     if(top <= -1) return -1;
     else return stack[top];
@@ -284,7 +284,7 @@ int popQueue(int count, int front, int rear)
     return count;
 }
 
-int topElQueue(int front, int rear)
+int peekQueue(int front, int rear)
 {
     if(front == rear)
     {
